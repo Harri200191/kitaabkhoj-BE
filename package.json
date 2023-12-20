@@ -2,10 +2,12 @@
   "name": "kitaabkhoj-be",
   "version": "1.0.0",
   "description": "Backend for KitaabKhoj",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "./node_modules/.bin/tsc --project ./tsconfig.json",
-    "dev": "ts-node-dev index.ts"
+    "dev": "ts-node-dev index.ts",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "bin": {
     "new-migration": "./migration.js"
@@ -19,16 +21,31 @@
     "@types/joi": "^17.2.3",
     "@types/pg": "^8.10.9",
     "@types/sequelize": "^4.28.19",
+    "cli": "^1.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "expo": "^49.0.21",
+    "expo-splash-screen": "~0.20.5",
+    "expo-status-bar": "~1.6.0",
     "express": "^4.18.2",
+    "http": "^0.0.1-security",
     "joi": "^17.11.0",
+    "njwt": "^2.0.0",
     "node-readme": "^0.1.9",
     "pg": "^8.11.3",
     "postmark": "^4.0.2",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "0.72.6",
+    "react-native-web": "~0.19.6",
     "sequelize-typescript": "^2.1.5",
     "ts-node-dev": "^2.0.0",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.2.14",
+    "@types/react-native": "^0.72.8"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "kitaabkhoj-be",
+    "slug": "kitaabkhoj-be",
+    "version": "1.0.0",
+    "description": "Backend for KitaabKhoj",
+    "sdkVersion": "49.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "android": {
+      "package": "com.anonymous.kitaabkhojbe"
+    }
+  }
+}

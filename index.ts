@@ -1,4 +1,3 @@
-
 import express from 'express';
 import { Sequelize } from 'sequelize-typescript';
 import { dbObj } from './config'; // Your database configuration
@@ -7,25 +6,21 @@ import routes from './routes'
 const http = require('http')
 const cors = require('cors');
 
-
 import dbInit from './db/init'
 
 const app = express();
 const port = process.env.PORT || 3000; // Port to listen on
-
 
 // await dbInit();
 app.use(express.json()); // Add this middleware to parse JSON request bodies
 app.use('/uploads', express.static('uploads'));
 app.use(cors());
 
-
  app.use('/v1', routes)
  app.use('*', notFoundHandler) 
 
-
  const server = http.createServer(app);
-
+ 
  async function initializeApp() {
   try {
     await dbInit(); 
